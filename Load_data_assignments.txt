@@ -1,0 +1,331 @@
+1.RJ_CONSUMER_COMPLAINTS
+
+use database demo_database;
+CREATE or replace table RJ_CONSUMER_COMPLAINTS
+
+(    DATE_RECEIVED STRING,
+     PRODUCT_NAME VARCHAR2(50),
+     SUB_PRODUCT VARCHAR2(100),
+     ISSUE VARCHAR2(100),
+     SUB_ISSUE VARCHAR2(100),
+     CONSUMER_COMPLAINT_NARRATIVE string,
+     Company_Public_Response STRING,
+     Company VARCHAR(100),
+     State_Name CHAR(4),
+     Zip_Code string,
+     Tags VARCHAR(40),
+     Consumer_Consent_Provided CHAR(25),
+     Submitted_via STRING,
+     Date_Sent_to_Company STRING,
+     Company_Response_to_Consumer VARCHAR(40),
+     Timely_Response CHAR(4),
+     CONSUMER_DISPUTED CHAR(4),
+     COMPLAINT_ID NUMBER(12,0) NOT NULL PRIMARY KEY   
+);
+describe table RJ_CONSUMER_COMPLAINTS;
+select * from RJ_CONSUMER_COMPLAINTS;
+
+2.Brilliant_British_Cars
+
+ use database demo_databse;
+ create table Brilliant_British_Cars
+ (invoice_date string,
+  make varchar(20),
+  country_name varchar(20),
+  Is_Dealer char(4),
+  Sale_Price int,
+  Cost_Price int,
+  Total_Discount number(10,2),
+  Delivery_Charge int,
+  Spare_Parts number,
+  Labor_Cost number,
+  Client_Name varchar(40),
+  model char(20),
+  color char(30),
+  Reporting_Year string,
+  Reporting_Month int,
+  Registration_Date string,
+  Vehicle_Type char(20),
+  Invoice_Number varchar(40) not null primary key,
+  Country_ISO_Code char(5),
+  Outer_Postode char(5),
+  Region varchar(30));
+ describe table Brilliant_British_Cars;
+ select * from  Brilliant_British_Cars;
+);               
+
+3.store_cities
+
+use database demo_database;
+create table Ko_store_cities
+	(STORE_ID VARCHAR(30),
+	STORETYPE_ID VARCHAR(10),
+	STORE_SIZE VARCHAR(40),
+	CITY_ID VARCHAR(20),
+	STATE_STATE_ABR_CITY VARCHAR(60),
+	LAT_LONG VARCHAR(50)
+);
+describe table Ko_store_cities;
+select * from  Ko_store_cities;  
+
+4.sample_superstore
+use database demo_database1;
+create table sample_superstore1
+(row_id int,
+ order_id varchar(50),
+ order_date string,
+ ship_date string,
+ ship_mode varchar(40),
+ customer_id varchar(40),
+ customer_name varchar(40),
+ segment varchar(30),
+ country_region varchar(30),
+ city varchar(30),
+ state varchar(30),
+ postal_code number,
+ region char(10),
+ product_id varchar(40),
+ category varchar(50),
+ sub_category varchar(50),
+ product_name varchar(200),
+ sales float,
+ quantity int,
+ discount float,
+ profit float);
+describe table sample_superstore1;
+select * from sample_superstore1; 
+
+5.sales_data
+
+use database demo_database;
+create table ko_sales_data1
+(
+invoice_date string,
+  make varchar(180),
+  country_name varchar(180),
+  Is_Dealer char(4),
+  Sale_Price int,
+  Cost_Price int,
+  Total_Discount number(10,2),
+  Delivery_Charge int,
+  Spare_Parts number,
+  Labor_Cost number,
+  Client_Name varchar(160),
+  model varchar(160),
+  color char(90),
+  Reporting_Year int,
+  Reporting_Month int,
+  Registration_Date string,
+  Vehicle_Type varchar(90),
+  Invoice_Number varchar(100) not null primary key
+  );
+ describe table ko_sales_data1;
+ select * from ko_sales_data1;
+
+6.P6_UK_Bank_Customers
+
+use database demo_database1;
+create table P6_UK_Bank_Customers
+ (customer_id int,
+  name varchar(20),
+  surname varchar(30),
+  gender varchar(10),
+  age int,
+  region varchar(20),
+  job_classification varchar(40),
+  date_joined string,
+  balance number(10,2));
+describe table P6_UK_Bank_Customers;
+select * from P6_UK_BANK_CUSTOMERS; 
+
+7.P6_SuperStoreUS-2015(1)
+
+ use database demo_database;
+create table P6_SuperStoreUS2
+(row_id int,
+ order_priority varchar(100),
+ discount float,
+ unit_price number(10,2),
+ shipping_cost number(10,2),
+ customer_id int,
+ customer_name varchar(100),
+ ship_mode varchar(100),
+ customer_segment varchar(140),
+ product_category varchar(150),
+ product_sub_category varchar(160),
+ product_container varchar(100),
+ product_name varchar(190),
+ product_base_margin float,
+ country char(100),
+ region char(100),
+ state_of_province varchar(190),
+ city char(100),
+ postal_code int,
+ order_date string,
+ ship_date string,
+ profit int,
+ quantity_ordered_new int,
+ sales number(10,2),
+ order_id int);
+describe table P6_SuperStoreUS2;
+select * from P6_SuperStoreUS2;
+
+ 
+8.P6_officesupplies
+
+use database demo_database;
+create table P6_officesupplies1
+(order_date string,
+ region char(10),
+ rep varchar(20),
+ item varchar(20),
+ units int,
+ unit_price float);
+describe table P6_officesupplies1;
+select * from P6_officesupplies1;  
+
+
+9.P6_long_term_unemployment
+
+use database demo_database;
+create table P6_long_term_unemployment
+(age string,
+ gender char(5),
+ period string,
+ unemployed int);
+describe table P6_long_term_unemployment;
+select * from P6_LONG_TERM_UNEMPLOYMENT;
+
+10.P6_EuroDebtCrisis
+
+use database demo_database;
+create table P6_EuroDebtCrisis1
+(creditor varchar(40),
+ debtor varchar(20),
+ amount float,
+ risk varchar(20));
+describe table P6_EuroDebtCrisis1;
+select * from P6_EuroDebtCrisis1;   
+
+11.P6_AmazingMartEu2Geo1
+
+use database demo_database;
+create table P6_AmazingMartEu2Geo
+(order_id string,
+ order_date string,
+ customer_name varchar(60),
+ city varchar(40),
+ country varchar(40),
+ region char(20),
+ segment varchar(50),
+ ship_date string,
+ ship_mode varchar(30),
+ state varchar(90),
+ lon float,
+ lat float);
+describe table P6_AmazingMartEu2Geo; 
+select * from P6_AmazingMartEu2Geo;
+
+11.1 OrderBreakdown
+
+use database demo_database;
+create table P6_AmazingMartEu2Geo12
+(order_id string,
+ product_name varchar(190),
+ discount float,
+ sales int,
+ profit int,
+ quantity int,
+ category varchar(100),
+ sub_category varchar(60));
+describe table P6_AmazingMartEu2Geo12;
+select * from P6_AmazingMartEu2Geo12;
+
+
+12.complain_administration
+
+use database demo_database;
+create table complain_administration
+( id int,
+  complain_date string,
+  completion_date string,
+  customer_id number,
+  broker_id number,
+  product_id number,
+  complain_priority_id number,
+  complain_type_id number,
+  complain_source_id number,
+  complain_category_id number,
+  complain_status_id int,
+  administrator_id number,
+  client_satisfaction char(50),
+  expected_reimbursement int);
+describe table complain_administration;
+select * from COMPLAIN_ADMINISTRATION;  
+
+12.1status_history_data
+use database demo_database1;
+create table status_history_data
+(id int,
+ complaint_id int,
+ complaint_status_id int,
+ status_date string);
+describe table status_history_data;
+select * from status_history_data; 
+
+13.countries  
+
+use database demo_database1;
+create table countries
+(country_id int,
+ country_name varchar(40),
+ country_name_local varchar(50),
+ country_flag_url string);
+describe table countries;
+select * from countries;
+
+14.carsales_data  
+
+use database demo_database;
+create table carsales_data
+(stock_id int,
+ make varchar(60),
+ model varchar(90),
+ color_id int,
+ vehicle_type varchar(60),
+ cost_price int,
+ spare_parts int,
+ labor_cost int,
+ registration_date string,
+ mileage int,
+ vehicle_age_in_years int);
+describe table carsales_data;
+select * from carsales_data;
+
+15.carmake_and_modelmatrix
+
+use database demo_database;
+create table carmake_and_modelmatrix
+(make varchar(20),
+ marque varchar(60),
+ sales int);
+describe table carmake_and_modelmatrix;
+select * from carmake_and_modelmatrix;   
+
+16.ny_property_sales
+use database demo_database;
+create table ny_property_sales1
+( id int,
+  area varchar(100),
+  NEIGHBORHOOD varchar(100),
+  BUILDING_CLASS_CATEGORY varchar(100),
+  ADDRESS varchar(100),
+  ZIP_CODE int,
+  LAND_SQUARE_FEET varchar(100),
+  GROSS_SQUARE_FEET varchar(100),
+  YEAR_BUILT varchar(20),
+  SALE_DATE string,
+  SALES_PRICE int
+);
+describe table ny_property_sales1;
+select * from ny_property_sales1;                    
